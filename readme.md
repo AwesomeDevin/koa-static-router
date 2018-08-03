@@ -6,13 +6,13 @@
 
 Static file serving middleware with router,wrapper for koa-send.【koa中间件,koa-static-router实现多个&&多层路由加载静态资源】
 
-# Installation
+## Installation
 
 ```js
 $ npm install koa-static-router
 ```
 
-# Usage
+## Usage
 #### A Single Router
 ```
  app.use(static({
@@ -39,7 +39,7 @@ app.use(static([
 ]))
 ```
 
-# Example
+## Example
 ```
 git clone git@github.com:Rise-Devin/koa-static-router.git
 cd koa-static-router
