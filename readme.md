@@ -1,3 +1,4 @@
+
 # koa-static-router
 ![](https://img.shields.io/badge/npm-1.1.3-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
@@ -5,13 +6,19 @@
 
 Static file serving middleware with router
 
-## Installation
+# demo
+```
+git clone git@github.com:Rise-Devin/koa-static-router.git
+npm install 
+npm start
+```
+# Installation
 
 ```js
 $ npm install koa-static-router
 ```
 
-## Usage
+# Usage
 #### A Single Router
 ```
  app.use(static({
@@ -38,7 +45,7 @@ app.use(static([
 ]))
 ```
 
-## Example
+# Example
 Access localhost:3000/public/image/dir/1.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/public.png?raw=true)
 Access localhost:3000/static/image/dir/2.png
