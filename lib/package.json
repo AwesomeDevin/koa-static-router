@@ -1,6 +1,6 @@
 {
   "name": "koa-static-router",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "repository": "Rise-Devin/koa-static-router",
   "description": "Serving for koa-send to be a static server",
   "main": "index.js",
