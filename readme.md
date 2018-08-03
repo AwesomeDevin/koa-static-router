@@ -21,9 +21,11 @@ $ npm install koa-static-router
 ```
 
 #### Multiple Router 
- please make sure that routing is same length when you choose Multiple Router   (多个路由时，请确保路由长度相同)
- '/static/'         - > length = 1
- '/static/image1/'  - > length =2
+> please make sure that routing is same length when you choose Multiple Router   (多个路由时，请确保路由长度相同)
+
+> '/static/'         - >routing length = 1
+
+> '/static/image1/'  - >routing length =2
 ```
 app.use(static([
     {
