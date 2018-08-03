@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
 
-Static file serving middleware with router,wrapper for koa-send.
+Static file serving middleware with router,wrapper for koa-send.【koa中间件,koa-static-router实现多个&&多层路由加载静态资源】
 
 # Installation
 
