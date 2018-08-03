@@ -15,8 +15,8 @@ $ npm install koa-static-router
 #### A Single Router
 ```
  app.use(static({
-     dir,
-     route  
+     dir,    //dir:static resource directory
+     route    //router:router
  }))
 ```
 
@@ -39,9 +39,9 @@ app.use(static([
 ```
 
 ## Example
-localhost:3000/public/image/dir/1.png
+Access localhost:3000/public/image/dir/1.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/public.png?raw=true)
-localhost:3000/static/image/dir/2.png
+Access localhost:3000/static/image/dir/2.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/static.png?raw=true)
 ```
 const static = require('koa-static-router');
