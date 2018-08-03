@@ -6,13 +6,6 @@
 
 Static file serving middleware with router,wrapper for koa-send.
 
-# demo
-```
-git clone git@github.com:Rise-Devin/koa-static-router.git
-cd koa-static-router
-npm install 
-npm start
-```
 # Installation
 
 ```js
@@ -47,6 +40,12 @@ app.use(static([
 ```
 
 # Example
+```
+git clone git@github.com:Rise-Devin/koa-static-router.git
+cd koa-static-router
+npm install 
+npm start
+```
 Access localhost:3000/public/image/dir/1.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/public.png?raw=true)
 Access localhost:3000/static/image/dir/2.png
