@@ -38,7 +38,7 @@ app.use(static([
 ]))
 ```
 
-## Examplle
+## Example
 localhost:3000/public/image/dir/1.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/public.png?raw=true)
 localhost:3000/static/image/dir/2.png
