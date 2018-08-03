@@ -12,7 +12,7 @@ $ npm install koa-static-router
 ```
 
 ## Usage
-#### 单路由
+#### A Single Router
 ```
  app.use(static({
      dir,
@@ -20,15 +20,15 @@ $ npm install koa-static-router
  }))
 ```
 
-#### 多路由 
-> 1、使用多路由时，请确保router层级相等，层级不相等可能会发生404
- '/static/'         - > 层级为1
- '/static/image1/'  - > 层级为2
+#### Multiple Router 
+> please make sure that routing is same length when you choose Multiple Router   (多个路由时，请确保路由长度相同)
+> '/static/'         - > length = 1
+> '/static/image1/'  - > length =2
 ```
 app.use(static([
     {
-    dir',
-    router 
+    dir',     //dir:static resource directory
+    router    //router:router
 },{
     dir,
     router  
@@ -40,17 +40,17 @@ app.use(static([
 ```
 const static = require('koa-static-router');
 
-//   单路由
+//   A Single Router
 // app.use(static({
 //     dir:'public',
 //     router:'/static/'   
 // }))
 
 
-//多路由
+//Multiple Router
 app.use(static([
     {
-    dir:'public',
+    dir:'public',     
     router:'/public/image/'   
 },{
     dir:'static',
