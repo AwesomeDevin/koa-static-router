@@ -4,11 +4,12 @@
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
 
-Static file serving middleware with router
+Static file serving middleware with router,wrapper for koa-send.
 
 # demo
 ```
 git clone git@github.com:Rise-Devin/koa-static-router.git
+cd koa-static-router
 npm install 
 npm start
 ```
