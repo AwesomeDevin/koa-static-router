@@ -1,0 +1,14 @@
+{
+  "name": "koa-static-router",
+  "version": "1.0.0",
+  "description": "Serving for koa-send",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "daivonup@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "koa-send": "^5.0.0"
+  }
+}
