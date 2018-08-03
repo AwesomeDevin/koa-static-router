@@ -2,39 +2,38 @@ const Koa = require('koa')
 const app = new Koa()
 const http = require('http');
 const https = require('https');
-const router = require('koa-router')()
-// const static = require('koa-static'); 
+const router = require('koa-router')();
 const path = require('path');
-// const bodyParser = require('koa-bodyparser');
 const fs = require('fs');
-const listDir = require('./koa-static-router');
+const listDir = require('./lib');
 
-// app.use(bodyParser())    
+/*
+ 1、使用多路由时，请确保router层级相等，层级不相等可能会发生404
+ '/static/'         - > 层级为1
+ '/static/image1/'  - > 层级为2
+*/
 
-// app.use(static(
-//     path.join( __dirname,  'public')
-// )) 
 
+
+/*  单路由
 // app.use(listDir({
 //     dir:'public',
-//     route:'/static/image'   //dont't use path.join 
+//     router:'/static/'   
 // }))
-app.use(listDir([{
+*/
+
+//多路由
+app.use(listDir([
+    {
     dir:'public',
-    router:'/'   //dont't use path.join 
-},{
-    dir:'public',
-    router:'/public/image'   //dont't use path.join 
+    router:'/static/image1/'   
 },{
     dir:'static',
-    router:'/static/image'   //dont't use path.join 
-}]))
+    router:'/static/image2/'   
+}
+]))
 
-// app.use(listDir('public'))
 
-// app.keys = ['im a newer secret', 'i like turtle'];
-// app.keys = new KeyGrip(['im a newer secret', 'i like turtle'], 'sha256');
-//logger
 app.use(async (ctx,next)=>{
     await next()
     const rt = ctx.response.get('X-Response-Time')
