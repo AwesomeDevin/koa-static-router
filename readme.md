@@ -21,9 +21,9 @@ $ npm install koa-static-router
 ```
 
 #### Multiple Router 
-> please make sure that routing is same length when you choose Multiple Router   (多个路由时，请确保路由长度相同)
-> '/static/'         - > length = 1
-> '/static/image1/'  - > length =2
+ please make sure that routing is same length when you choose Multiple Router   (多个路由时，请确保路由长度相同)
+ '/static/'         - > length = 1
+ '/static/image1/'  - > length =2
 ```
 app.use(static([
     {
@@ -37,6 +37,10 @@ app.use(static([
 ```
 
 ## Examplle
+localhost:3000/public/image/dir/1.png
+![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/public.png?raw=true)
+localhost:3000/static/image/dir/2.png
+![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/static.png?raw=true)
 ```
 const static = require('koa-static-router');
 
@@ -51,10 +55,10 @@ const static = require('koa-static-router');
 app.use(static([
     {
     dir:'public',     
-    router:'/public/image/'   
+    router:'/public/image/'   //routing length = 2
 },{
     dir:'static',
-    router:'/static/image/'   
+    router:'/static/image/'   //routing length = 2
 }
 ]))
 ```
