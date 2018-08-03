@@ -1,7 +1,7 @@
 {
   "name": "koa-static-router",
-  "version": "1.1.0",
-  "description": "Serving for koa-send",
+  "version": "1.1.2",
+  "description": "Serving for koa-send to be a static server",
   "main": "index.js",
   "scripts": {
     "test": "test"

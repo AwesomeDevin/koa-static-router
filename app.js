@@ -5,7 +5,9 @@ const https = require('https');
 const router = require('koa-router')();
 const path = require('path');
 const fs = require('fs');
-const listDir = require('koa-static-router');
+// const listDir = require('koa-static-router');
+const listDir = require('./lib');
+
 
 /*
  1、使用多路由时，请确保router层级相等，层级不相等可能会发生404
@@ -15,21 +17,21 @@ const listDir = require('koa-static-router');
 
 
 
-/*  单路由
+//   单路由
 // app.use(listDir({
 //     dir:'public',
 //     router:'/static/'   
 // }))
-*/
+
 
 //多路由
 app.use(listDir([
     {
     dir:'public',
-    router:'/static/image1/'   
+    router:'/public/image/'   
 },{
     dir:'static',
-    router:'/static/image2/'   
+    router:'/static/image/'   
 }
 ]))
 
@@ -65,19 +67,18 @@ app.use(async (ctx,next)=> {
     else if(ctx.status==405)
     {
         ctx.status = 405;
-        ctx.body="Method Not Allowed"
+        ctx.body='"Method Not Allowed"'
     }
 });
 
 
-// router.get('/static/:str',async (ctx,next)=>{
-//     console.log('-----------------------------------')
-//     const filePath = path.join(__dirname,'public')
-//     await listDir(ctx,filePath)
-//     // console.log('---',listDir)
-//     // ctx.response.body = 'success'
-// })
 
+router.get('/',(ctx,next)=>{
+    // console.log(ctx.request.query,ctx.request.body)
+    // ctx.redirect('back','./view/hello.html')
+    ctx.response.type = 'html';
+    ctx.response.body = fs.createReadStream('./view/hello.html');
+})
 router.get('/user',(ctx,next)=>{
     console.log(ctx.request.query,ctx.request.body)
     ctx.response.body = JSON.stringify(ctx.request.query)
