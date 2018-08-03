@@ -5,8 +5,8 @@ const https = require('https');
 const router = require('koa-router')();
 const path = require('path');
 const fs = require('fs');
-// const listDir = require('koa-static-router');
-const listDir = require('./lib');
+const static = require('koa-static-router');
+
 
 
 /*
@@ -18,14 +18,14 @@ const listDir = require('./lib');
 
 
 //   单路由
-// app.use(listDir({
+// app.use(static({
 //     dir:'public',
 //     router:'/static/'   
 // }))
 
 
 //多路由
-app.use(listDir([
+app.use(static([
     {
     dir:'public',
     router:'/public/image/'   
