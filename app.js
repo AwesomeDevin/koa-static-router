@@ -5,7 +5,7 @@ const https = require('https');
 const router = require('koa-router')();
 const path = require('path');
 const fs = require('fs');
-const listDir = require('./lib');
+const listDir = require('koa-static-router');
 
 /*
  1、使用多路由时，请确保router层级相等，层级不相等可能会发生404
