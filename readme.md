@@ -1,24 +1,18 @@
 
 # koa-static-router
-![](https://img.shields.io/badge/npm-1.1.3-blue.svg)
+![](https://img.shields.io/badge/npm-1.1.7-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
 
-Static file serving middleware with router
+Static file serving middleware with router,wrapper for koa-send.【koa中间件,koa-static-router实现多个&&多层路由加载静态资源】
 
-# demo
-```
-git clone git@github.com:Rise-Devin/koa-static-router.git
-npm install 
-npm start
-```
-# Installation
+## Installation
 
 ```js
 $ npm install koa-static-router
 ```
 
-# Usage
+## Usage
 #### A Single Router
 ```
  app.use(static({
@@ -45,7 +39,13 @@ app.use(static([
 ]))
 ```
 
-# Example
+## Example
+```
+git clone git@github.com:Rise-Devin/koa-static-router.git
+cd koa-static-router
+npm install 
+npm start
+```
 Access localhost:3000/public/image/dir/1.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/public.png?raw=true)
 Access localhost:3000/static/image/dir/2.png
