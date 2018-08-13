@@ -2,6 +2,9 @@
 # koa-static-router
 ![](https://img.shields.io/badge/npm-1.1.7-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+![](https://img.shields.io/badge/downloads-68/m-red.svg)
+
+
 
 
 Static file serving middleware with router,wrapper for koa-send.【koa中间件,koa-static-router实现多个&&多层路由加载静态资源】
