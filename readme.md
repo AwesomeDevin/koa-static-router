@@ -15,6 +15,7 @@ $ npm install koa-static-router
 ## Usage
 #### A Single Router
 ```
+const static = require('koa-static-router');
  app.use(static({
      dir,    //dir:static resource directory
      route    //router:router
@@ -28,6 +29,7 @@ $ npm install koa-static-router
 
 > '/static/image1/'  - >routing length =2
 ```
+const static = require('koa-static-router');
 app.use(static([
     {
     dir',     //dir:static resource directory
