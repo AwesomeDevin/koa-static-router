@@ -25,7 +25,7 @@ app.use(static('public'))      //dir:public  route:'/public'
 ```
  app.use(static({
      dir:'public',    //dir:static resource directory
-     route:'/'    //router:router
+     router:'/'    //router:router
  }))
 ```
 
