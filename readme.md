@@ -17,30 +17,32 @@ $ npm install koa-static-router
 ```
 
 ## Usage
-#### A Single Router
+#### Simple Router   (简单配置)
 ```
-const static = require('koa-static-router');
+app.use(static('public'))    
+```
+#### A Single Router   (单个路由配置)
+```
  app.use(static({
-     dir,    //dir:static resource directory
-     route    //router:router
+     dir:'public',    //dir:static resource directory
+     route:'/'    //router:router
  }))
 ```
 
-#### Multiple Router 
+#### Multiple Router  (多个路由配置)
 > please make sure that routing is same length when you choose Multiple Router   (多个路由时，请确保路由长度相同)
 
 > '/static/'         - >routing length = 1
 
 > '/static/image1/'  - >routing length =2
 ```
-const static = require('koa-static-router');
 app.use(static([
     {
-    dir',     //dir:static resource directory
-    router    //router:router
+    dir:'public',     //dir:static resource directory
+    router:'/public/'    //router:router
 },{
-    dir,
-    router  
+    dir:'static',
+    router:'/static/'  
 }
 ]))
 ```
