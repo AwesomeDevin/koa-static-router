@@ -19,7 +19,7 @@ $ npm install koa-static-router
 ## Usage
 #### Simple Router   (简单配置)
 ```
-app.use(static('public'))      //dir:public  route:'/public'
+app.use(static('public'))      //default: {dir:public  route:'/public'}
 ```
 #### A Single Router   (单个路由配置)
 ```
