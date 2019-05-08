@@ -8,7 +8,7 @@
 
 
 
-Static file serving middleware with router,wrapper for koa-send and support Multiple Router  
+Static file serving middleware with router,wrapper for [koa-send](https://github.com/koajs/send) and support Multiple Router  
 
 ## Installation
 
