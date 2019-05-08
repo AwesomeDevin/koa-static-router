@@ -51,11 +51,11 @@ app.use(async (ctx, next) => {
     ctx.set('X-Response-Time', `${ms}ms`);
   });
 
-app.use(async (ctx, next)=>{
-    await next();
-    // ctx.cookies.set('name', 'tobi', { signed: true });
-    // ctx.body = 'Hello World'
-})
+// app.use(async (ctx, next)=>{
+//     await next();
+//     // ctx.cookies.set('name', 'tobi', { signed: true });
+//     // ctx.body = 'Hello World'
+// })
 
 app.use(async (ctx,next)=> {
     await next();
@@ -88,6 +88,12 @@ router.post('/user',(ctx,next)=>{
     // console.log(ctx.request.query,ctx.request.body)
     ctx.response.body = 'success'
 })
+
+router.get('/upload',(ctx,next)=>{
+    console.log('upload',ctx.request.body)
+    ctx.response.body='success'
+})
+
 
 
 
