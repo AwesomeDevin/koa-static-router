@@ -1,6 +1,6 @@
 
 # koa-static-router
-![](https://img.shields.io/badge/npm-1.1.8-blue.svg)
+![](https://img.shields.io/badge/npm-1.3.0-blue.svg)
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
