@@ -8,7 +8,7 @@
 
 
 
-Static file serving middleware with router,wrapper for koa-send.【koa中间件,koa-static-router实现多个&&多层路由加载静态资源】
+Static file serving middleware with router,wrapper for koa-send.
 
 ## Installation
 
@@ -17,11 +17,11 @@ $ npm install koa-static-router
 ```
 
 ## Usage
-#### Simple Router   (简单配置)
+#### Simple Router  
 ```
 app.use(static('public'))      //default: {dir:public  route:'/public'}
 ```
-#### A Single Router   (单个路由配置)
+####  Single Router   
 ```
  app.use(static({
      dir:'public',    //dir:static resource directory
@@ -29,8 +29,8 @@ app.use(static('public'))      //default: {dir:public  route:'/public'}
  }))
 ```
 
-#### Multiple Router  (多个路由配置)
-> please make sure that routing is same length when you choose Multiple Router   (多个路由时，请确保路由长度相同)
+#### Multiple Router  
+> please make sure that routing is same length when you choose Multiple Router  
 
 > '/static/'         - >routing length = 1
 
