@@ -30,7 +30,7 @@ app.use(static('public'))      //default: {dir:public  route:'/public'}
 ```
 
 #### Multiple Router  
-> please make sure that routing is same length when you choose Multiple Router  
+> please make sure that routing length is the same when you choose Multiple Router  
 
 > '/static/'         - >routing length = 1
 
