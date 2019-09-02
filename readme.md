@@ -12,17 +12,17 @@ Static file serving middleware with router,wrapper for [koa-send](https://github
 
 ## Installation
 
-```js
+```
 $ npm install koa-static-router
 ```
 
 ## Usage
 #### Simple Router  
-```
+```javascript
 app.use(static('public'))      //default: {dir:public  route:'/public'}
 ```
 ####  Single Router   
-```
+```javascript
  app.use(static({
      dir:'public',    //dir:static resource directory
      router:'/'    //router:router
@@ -35,7 +35,7 @@ app.use(static('public'))      //default: {dir:public  route:'/public'}
 > '/static/'         - >routing length = 1
 
 > '/static/image1/'  - >routing length =2
-```
+```javascript
 app.use(static([
     {
     dir:'public',     //dir:static resource directory
@@ -58,7 +58,7 @@ Access localhost:3000/public/image/dir/1.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/public.png?raw=true)
 Access localhost:3000/static/image/dir/2.png
 ![](https://github.com/Rise-Devin/koa-static-router/blob/master/img/static.png?raw=true)
-```
+```javascript
 const static = require('koa-static-router');
 
 //   A Single Router
