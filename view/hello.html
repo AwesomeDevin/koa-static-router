@@ -47,5 +47,28 @@
             <input type="submit" />
         </form>
     </h1>
+
+    <div>
+        <button onclick="fetchData()">jsonp获取数据</button>
+        <a href="http://localhost:3000/jsonp?callback=fn">查看jsonp api</a>
+        <p id="text"></p>
+    </div>
 </body>
+<script>
+    function fn(data) {
+    //我们就简单的获取apple搜索结果的第一条记录中url数据
+    console.log('res',data);
+    document.getElementById('text').innerHTML=JSON.stringify(data)
+  }
+  function addScriptTag(src){
+    var script = document.createElement('script');
+    script.setAttribute("type","text/javascript");
+    script.src = src;
+    document.body.appendChild(script);
+  }
+  
+  function fetchData(){
+    addScriptTag("http://localhost:3000/jsonp?callback=fn");
+  }
+</script>
 </html>

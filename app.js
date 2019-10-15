@@ -39,7 +39,6 @@ app.use(static([
 app.use(async (ctx,next)=>{
     await next()
     const rt = ctx.response.get('X-Response-Time')
-    console.log(`${ctx.method}${ctx.url}-${rt}`)
 })
 
 
@@ -51,15 +50,8 @@ app.use(async (ctx, next) => {
     ctx.set('X-Response-Time', `${ms}ms`);
   });
 
-// app.use(async (ctx, next)=>{
-//     await next();
-//     // ctx.cookies.set('name', 'tobi', { signed: true });
-//     // ctx.body = 'Hello World'
-// })
-
 app.use(async (ctx,next)=> {
     await next();
-    // console.log(ctx.status)
 	if(ctx.status==404){
         ctx.status = 404;
         ctx.body="404"
@@ -74,23 +66,30 @@ app.use(async (ctx,next)=> {
 
 
 router.get('/',(ctx,next)=>{
-    // console.log(ctx.request.query,ctx.request.body)
-    // ctx.redirect('back','./view/hello.html')
     ctx.response.type = 'html';
     ctx.response.body = fs.createReadStream('./view/hello.html');
 })
+
+//http请求
+router.get('/jsonp',(ctx,next)=>{
+    const params = ctx.request.query
+    const data = {
+        code:0,
+        data:'success'
+        }
+    const res = params.callback+'('+JSON.stringify(data)+')'
+    console.log('返回结果>>',res)
+    ctx.response.body = res
+})
 router.get('/user',(ctx,next)=>{
-    console.log(ctx.request.query,ctx.request.body)
     ctx.response.body = JSON.stringify(ctx.request.query)
 })
 
 router.post('/user',(ctx,next)=>{
-    // console.log(ctx.request.query,ctx.request.body)
     ctx.response.body = 'success'
 })
 
 router.get('/upload',(ctx,next)=>{
-    console.log('upload',ctx.request.body)
     ctx.response.body='success'
 })
 
@@ -103,4 +102,3 @@ app.use(router.allowedMethods()); //作用： 当请求出错时的处理逻辑
 http.createServer(app.callback()).listen(3000);
 https.createServer(app.callback()).listen(3001);
 console.log('the server is running on 3000');
-console.log(__dirname);
